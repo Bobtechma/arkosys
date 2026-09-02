@@ -5,7 +5,7 @@
 ### Core
 - [x] **CORE-01**: Header responsivo com logo, links (Início, Recursos, Simulador, Contato) e CTA de destaque.
 - [x] **CORE-02**: Hero Section com título de impacto, subtítulo explicativo e botões de ancoragem ("Simular Orçamento" e "Ver Portfólio").
-- [ ] **CORE-03**: Seção de Funcionalidades com 3 a 4 cards detalhando os benefícios do sistema base.
+- [x] **CORE-03**: Seção de Funcionalidades com 3 a 4 cards detalhando os benefícios do sistema base.
 - [x] **CORE-04**: Footer contendo informações de contato, links úteis e direitos autorais.
 
 ### Simulador
