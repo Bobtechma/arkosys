@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header className="header glassmorphism">
       <div className="header-container">
-        <div className="logo">LogoSistema</div>
+        <div className="logo">
+          <span style={{ color: 'var(--color-accent)' }}>Bob</span>Tech
+        </div>
         
         {/* Desktop Navigation */}
         <nav className="desktop-nav">

@@ -1,66 +1,91 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Footer.css';
-import { getRandomPhone, formatPhoneNumber, createWhatsAppUrl } from '../utils/contact';
+import { CONTACT_NUMBERS, formatPhoneNumber, createWhatsAppUrl } from '../utils/contact';
 
 const Footer = () => {
-  const [activePhone, setActivePhone] = useState('5598987481998');
-
-  useEffect(() => {
-    setActivePhone(getRandomPhone());
-  }, []);
-
-  const handleContactClick = (e) => {
+  const handleWhatsAppGeneralClick = (e) => {
     e.preventDefault();
-    const url = createWhatsAppUrl('Olá! Gostaria de mais informações sobre os sistemas.');
+    const url = createWhatsAppUrl('Olá! Gostaria de mais informações sobre o desenvolvimento de sistemas.');
     window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleSpecificNumberClick = (phone, e) => {
+    e.preventDefault();
+    const message = encodeURIComponent('Olá! Gostaria de conversar com a equipe de atendimento sobre os sistemas.');
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
     <footer id="contato" className="footer">
       <div className="footer-container">
-        <div className="footer-info">
-          <h3>LogoSistema</h3>
-          <p>Potencialize as vendas do seu sistema com a nossa plataforma moderna e interativa.</p>
-          <div className="contact-info">
-            <p>Email: contato@logosistema.com.br</p>
-            <p>
-              WhatsApp / Comercial:{' '}
-              <a
-                href="#"
-                onClick={handleContactClick}
-                className="footer-phone-link"
-                title="Clique para conversar no WhatsApp"
-              >
-                {formatPhoneNumber(activePhone)}
+        {/* Brand Column */}
+        <div className="footer-brand">
+          <div className="footer-logo">
+            <span className="logo-accent">Bob</span>Tech
+          </div>
+          <p className="footer-tagline">
+            Desenvolvimento e venda de sistemas modernos de alta conversão. Estruturas robustas, seguras e prontas para escalar o seu negócio.
+          </p>
+          <div className="footer-status-pill">
+            <span className="status-indicator"></span>
+            <span>Plantão de Atendimento Online</span>
+          </div>
+        </div>
+
+        {/* Quick Navigation Column */}
+        <div className="footer-col">
+          <h4 className="footer-heading">Navegação</h4>
+          <ul className="footer-nav-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#recursos">Funcionalidades & App</a></li>
+            <li><a href="#simulador">Simulador de Orçamento</a></li>
+          </ul>
+        </div>
+
+        {/* Direct Contact Column */}
+        <div className="footer-col footer-contact-col">
+          <h4 className="footer-heading">Canais Oficiais</h4>
+          
+          <div className="contact-item">
+            <span className="contact-icon">✉️</span>
+            <div className="contact-meta">
+              <span className="contact-label">E-mail Comercial</span>
+              <a href="mailto:bobtechma@gmail.com" className="contact-value-link">
+                bobtechma@gmail.com
               </a>
-            </p>
-            <div className="contact-numbers-badge">
-              <span>Plantão Comercial Ativo: (98) 98748-1998 | (98) 98610-1224 | (98) 98127-9111</span>
+            </div>
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-icon">💬</span>
+            <div className="contact-meta">
+              <span className="contact-label">Atendimento WhatsApp</span>
+              <div className="phone-numbers-list">
+                {CONTACT_NUMBERS.map((phone) => (
+                  <button
+                    key={phone}
+                    type="button"
+                    onClick={(e) => handleSpecificNumberClick(phone, e)}
+                    className="phone-chip"
+                    title={`Conversar com ${formatPhoneNumber(phone)}`}
+                  >
+                    <span>{formatPhoneNumber(phone)}</span>
+                    <span className="chip-arrow">↗</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        
-        <div className="footer-links">
-          <h4>Links Úteis</h4>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#recursos">Recursos</a></li>
-            <li><a href="#simulador">Simulador de Orçamento</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </div>
-        
-        <div className="footer-legal">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#termos">Termos de Uso</a></li>
-            <li><a href="#privacidade">Política de Privacidade</a></li>
-          </ul>
-        </div>
       </div>
-      
+
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} LogoSistema. Todos os direitos reservados.</p>
+        <div className="footer-bottom-container">
+          <p>&copy; {new Date().getFullYear()} BobTech - Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
+          <div className="footer-guarantee-note">
+            <span>🔒 Segurança com Criptografia SSL e Dados em Nuvem</span>
+          </div>
+        </div>
       </div>
     </footer>
   );
