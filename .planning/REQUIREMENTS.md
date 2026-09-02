@@ -20,8 +20,8 @@
 - [x] **UI-02**: Utilizar cores de destaque (Accent) vibrantes/neon (Roxo, Verde Esmeralda ou Laranja).
 - [x] **UI-03**: Tipografia limpa e tecnológica (Inter, Roboto ou Plus Jakarta Sans).
 - [x] **UI-04**: Elementos visuais com bordas arredondadas (rounded-lg), efeitos Glassmorphism nos cards e "glow" nos botões.
-- [ ] **UI-05**: Animações de scroll suaves e micro-interações de hover nos botões e cards.
-- [ ] **UI-06**: Layout 100% responsivo adaptado para Desktop, Tablet e Mobile.
+- [x] **UI-05**: Animações de scroll suaves e micro-interações de hover nos botões e cards.
+- [x] **UI-06**: Layout 100% responsivo adaptado para Desktop, Tablet e Mobile.
 
 ## v2 Requirements
 (Nenhum definido ainda)
