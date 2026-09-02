@@ -9,11 +9,11 @@
 - [x] **CORE-04**: Footer contendo informações de contato, links úteis e direitos autorais.
 
 ### Simulador
-- [ ] **SIM-01**: Simulador interativo em duas colunas (Opções vs. Resumo/Valor Final).
-- [ ] **SIM-02**: O simulador deve incluir o Valor Base fixo de R$ 2.000,00 e listagem de adicionais com toggles/checkboxes.
-- [ ] **SIM-03**: Opções adicionais disponíveis no simulador: Módulo Financeiro (+800), WhatsApp (+500), App Mobile (+3000), Agendamentos (+600), Relatórios Avançados (+400).
-- [ ] **SIM-04**: O resumo do orçamento (coluna direita) deve mostrar os adicionais selecionados e o valor total dinamicamente (sem recarregar a página, usando estado).
-- [ ] **SIM-05**: Botão CTA no simulador ("Solicitar este Sistema") que encaminha o usuário com o valor selecionado para WhatsApp ou formulário.
+- [x] **SIM-01**: Simulador interativo em duas colunas (Opções vs. Resumo/Valor Final).
+- [x] **SIM-02**: O simulador deve incluir o Valor Base fixo de R$ 2.000,00 e listagem de adicionais com toggles/checkboxes.
+- [x] **SIM-03**: Opções adicionais disponíveis no simulador: Módulo Financeiro (+800), WhatsApp (+500), App Mobile (+3000), Agendamentos (+600), Relatórios Avançados (+400).
+- [x] **SIM-04**: O resumo do orçamento (coluna direita) deve mostrar os adicionais selecionados e o valor total dinamicamente (sem recarregar a página, usando estado).
+- [x] **SIM-05**: Botão CTA no simulador ("Solicitar este Sistema") que encaminha o usuário com o valor selecionado para WhatsApp ou formulário.
 
 ### UI/UX
 - [x] **UI-01**: Implementar Dark Mode estrito (tons de cinza escuro/chumbo) sem qualquer uso da cor azul.
