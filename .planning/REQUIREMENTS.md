@@ -16,9 +16,9 @@
 - [ ] **SIM-05**: Botão CTA no simulador ("Solicitar este Sistema") que encaminha o usuário com o valor selecionado para WhatsApp ou formulário.
 
 ### UI/UX
-- [ ] **UI-01**: Implementar Dark Mode estrito (tons de cinza escuro/chumbo) sem qualquer uso da cor azul.
-- [ ] **UI-02**: Utilizar cores de destaque (Accent) vibrantes/neon (Roxo, Verde Esmeralda ou Laranja).
-- [ ] **UI-03**: Tipografia limpa e tecnológica (Inter, Roboto ou Plus Jakarta Sans).
+- [x] **UI-01**: Implementar Dark Mode estrito (tons de cinza escuro/chumbo) sem qualquer uso da cor azul.
+- [x] **UI-02**: Utilizar cores de destaque (Accent) vibrantes/neon (Roxo, Verde Esmeralda ou Laranja).
+- [x] **UI-03**: Tipografia limpa e tecnológica (Inter, Roboto ou Plus Jakarta Sans).
 - [ ] **UI-04**: Elementos visuais com bordas arredondadas (rounded-lg), efeitos Glassmorphism nos cards e "glow" nos botões.
 - [ ] **UI-05**: Animações de scroll suaves e micro-interações de hover nos botões e cards.
 - [ ] **UI-06**: Layout 100% responsivo adaptado para Desktop, Tablet e Mobile.
