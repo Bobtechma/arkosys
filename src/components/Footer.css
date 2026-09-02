@@ -24,15 +24,17 @@
 
 /* Brand Column */
 .footer-logo {
-  font-size: 26px;
-  font-weight: var(--font-weight-semibold);
-  color: #ffffff;
   margin-bottom: var(--spacing-3);
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
 }
 
-.logo-accent {
-  color: var(--color-accent);
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.25));
 }
 
 .footer-tagline {

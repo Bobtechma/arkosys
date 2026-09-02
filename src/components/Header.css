@@ -22,10 +22,24 @@
   margin: 0 auto;
 }
 
-.logo {
-  font-size: var(--font-size-heading);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-accent);
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo-img {
+  height: 46px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.2));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo-link:hover .header-logo-img {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 16px rgba(249, 115, 22, 0.45));
 }
 
 .desktop-nav {

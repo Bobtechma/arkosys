@@ -21,7 +21,11 @@ const Footer = () => {
         {/* Brand Column */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="logo-accent">Bob</span>Tech
+            <img
+              src="/images/logo.png"
+              alt="OmniSys Solutions"
+              className="footer-logo-img"
+            />
           </div>
           <p className="footer-tagline">
             Desenvolvimento e venda de sistemas modernos de alta conversão. Estruturas robustas, seguras e prontas para escalar o seu negócio.
@@ -81,7 +85,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} BobTech - Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} OmniSys Solutions — Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
           <div className="footer-guarantee-note">
             <span>🔒 Segurança com Criptografia SSL e Dados em Nuvem</span>
           </div>

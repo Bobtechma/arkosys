@@ -11,9 +11,13 @@ const Header = () => {
   return (
     <header className="header glassmorphism">
       <div className="header-container">
-        <div className="logo">
-          <span style={{ color: 'var(--color-accent)' }}>Bob</span>Tech
-        </div>
+        <a href="#inicio" className="logo-link" aria-label="OmniSys Solutions Início">
+          <img
+            src="/images/logo.png"
+            alt="OmniSys Solutions"
+            className="header-logo-img"
+          />
+        </a>
         
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
