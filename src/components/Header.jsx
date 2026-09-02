@@ -22,7 +22,7 @@ const Header = () => {
         </nav>
         
         <div className="cta-container desktop-cta">
-          <button className="btn-primary">Simular Orçamento</button>
+          <a href="#simulador" className="btn-primary">Simular Orçamento</a>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -40,7 +40,7 @@ const Header = () => {
           <a href="#recursos" onClick={toggleMenu}>Recursos</a>
           <a href="#simulador" onClick={toggleMenu}>Simulador</a>
           <a href="#contato" onClick={toggleMenu}>Contato</a>
-          <button className="btn-primary">Simular Orçamento</button>
+          <a href="#simulador" onClick={toggleMenu} className="btn-primary">Simular Orçamento</a>
         </nav>
       </div>
     </header>

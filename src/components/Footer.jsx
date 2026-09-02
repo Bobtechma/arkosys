@@ -1,16 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Footer.css';
+import { getRandomPhone, formatPhoneNumber, createWhatsAppUrl } from '../utils/contact';
 
 const Footer = () => {
+  const [activePhone, setActivePhone] = useState('5598987481998');
+
+  useEffect(() => {
+    setActivePhone(getRandomPhone());
+  }, []);
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const url = createWhatsAppUrl('Olá! Gostaria de mais informações sobre os sistemas.');
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <footer className="footer">
+    <footer id="contato" className="footer">
       <div className="footer-container">
         <div className="footer-info">
           <h3>LogoSistema</h3>
           <p>Potencialize as vendas do seu sistema com a nossa plataforma moderna e interativa.</p>
           <div className="contact-info">
             <p>Email: contato@logosistema.com.br</p>
-            <p>Telefone: (11) 99999-9999</p>
+            <p>
+              WhatsApp / Comercial:{' '}
+              <a
+                href="#"
+                onClick={handleContactClick}
+                className="footer-phone-link"
+                title="Clique para conversar no WhatsApp"
+              >
+                {formatPhoneNumber(activePhone)}
+              </a>
+            </p>
+            <div className="contact-numbers-badge">
+              <span>Plantão Comercial Ativo: (98) 98748-1998 | (98) 98610-1224 | (98) 98127-9111</span>
+            </div>
           </div>
         </div>
         

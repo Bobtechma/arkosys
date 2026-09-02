@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Simulator.css';
+import { createWhatsAppUrl } from '../utils/contact';
 
 const BASE_PRICE = 2000;
 
@@ -28,13 +29,15 @@ const Simulator = () => {
     return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   };
 
-  const generateWhatsAppUrl = () => {
+  const handleWhatsAppClick = (e) => {
+    e.preventDefault();
     const itemsList = selectedItems.length > 0 
       ? selectedItems.map(i => `• ${i.name} (${formatCurrency(i.price)})`).join('\n')
       : 'Nenhum adicional selecionado';
     
     const message = `Olá! Gostaria de solicitar um sistema montado pelo Simulador:\n\n• Sistema Base: ${formatCurrency(BASE_PRICE)}\n${itemsList}\n\n*Valor Total Estimado: ${formatCurrency(totalPrice)}*`;
-    return `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const targetUrl = createWhatsAppUrl(message);
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -132,14 +135,13 @@ const Simulator = () => {
                 </span>
               </div>
 
-              <a
-                href={generateWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={handleWhatsAppClick}
                 className="btn-primary summary-cta"
               >
                 Solicitar este Sistema
-              </a>
+              </button>
 
               <div className="summary-guarantee">
                 <span>🔒 Sem compromisso inicial. Atendimento direto pelo WhatsApp.</span>

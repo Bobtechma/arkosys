@@ -42,6 +42,41 @@ const Features = () => {
             <FeatureCard key={index} {...feature} />
           ))}
         </div>
+
+        {/* Spotlight Showcase: Mobile & Realtime Integration */}
+        <div className="features-spotlight glassmorphism">
+          <div className="spotlight-content">
+            <span className="spotlight-tag">Módulo Mobile Disponível</span>
+            <h3 className="spotlight-title">Gestão Completa na Palma da sua Mão</h3>
+            <p className="spotlight-desc">
+              Além do painel web corporativo, tenha seu próprio aplicativo nativo para Android e iOS.
+              Acompanhe pedidos, receba alertas de novos leads e controle o fluxo financeiro em tempo real onde estiver.
+            </p>
+            <ul className="spotlight-list">
+              <li>
+                <span className="spotlight-bullet">✓</span> Notificações instantâneas de vendas e agendamentos
+              </li>
+              <li>
+                <span className="spotlight-bullet">✓</span> Sincronização automática em nuvem sem delay
+              </li>
+              <li>
+                <span className="spotlight-bullet">✓</span> Acesso seguro com criptografia ponta a ponta
+              </li>
+            </ul>
+            <div className="spotlight-action">
+              <a href="#simulador" className="btn-primary">
+                Incluir App no Orçamento
+              </a>
+            </div>
+          </div>
+          <div className="spotlight-media">
+            <img
+              src="/images/mobile-preview.jpg"
+              alt="Aplicativo Mobile do Sistema"
+              className="spotlight-img"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
