@@ -141,7 +141,8 @@
 .showcase-media {
   position: relative;
   width: 100%;
-  max-height: 520px;
+  aspect-ratio: 1024 / 572;
+  max-height: 572px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -151,7 +152,8 @@
 
 .showcase-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  aspect-ratio: 1024 / 572;
   display: block;
   object-fit: cover;
 }

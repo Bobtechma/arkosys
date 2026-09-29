@@ -7,21 +7,27 @@ const TechBackground = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
     let animationFrameId;
+    let idleCallbackId;
+    let timeoutId;
+    let handleResize;
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    const handleResize = () => {
+    const init = () => {
+      const canvas = canvasRef.current;
       if (!canvas) return;
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    };
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
 
-    window.addEventListener('resize', handleResize);
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      handleResize = () => {
+        if (!canvas) return;
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      };
+
+      window.addEventListener('resize', handleResize, { passive: true });
 
     const isMobile = width < 768;
 
@@ -151,10 +157,21 @@ const TechBackground = () => {
     };
 
     render();
+  };
+
+  if ('requestIdleCallback' in window) {
+    idleCallbackId = window.requestIdleCallback(() => init(), { timeout: 800 });
+  } else {
+    timeoutId = setTimeout(init, 150);
+  }
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
+      if (idleCallbackId && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(idleCallbackId);
+      }
+      if (timeoutId) clearTimeout(timeoutId);
+      if (handleResize) window.removeEventListener('resize', handleResize);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
   }, []);
 

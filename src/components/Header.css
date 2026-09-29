@@ -32,6 +32,7 @@
   height: 46px;
   width: auto;
   max-width: 220px;
+  aspect-ratio: 220 / 46;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.2));
   transition: transform 0.25s ease, filter 0.25s ease;

@@ -49,35 +49,15 @@
     />
     <meta name="twitter:image" content="https://www.arkosys.com.br/images/og-image-v2.jpg" />
 
-    <!-- Preconnect & Asynchronous Non-blocking Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload Self-Hosted Inter Variable Font (Zero External Round-Trip) -->
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      as="font"
+      type="font/woff2"
+      href="/fonts/inter-variable.woff2"
+      crossorigin
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      />
-    </noscript>
 
-    <!-- Preload Hero LCP Image -->
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      href="/images/dashboard-preview.webp"
-      fetchpriority="high"
-    />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -103,50 +83,7 @@
     <title>Arkosys — Desenvolvimento de Sistemas & Soluções Digitais</title>
   </head>
   <body>
-    <div id="root">
-      <div class="app-container">
-        <header class="header glassmorphism">
-          <div class="header-container">
-            <a href="#inicio" class="logo-link" aria-label="Arkosys Tech Solutions Início">
-              <picture>
-                <source srcset="/images/logo.webp" type="image/webp" />
-                <img
-                  src="/images/logo.webp"
-                  alt="Arkosys Tech Solutions - Desenvolvimento de Sistemas & Soluções Digitais"
-                  class="header-logo-img"
-                  width="220"
-                  height="46"
-                />
-              </picture>
-            </a>
-            <nav class="desktop-nav">
-              <a href="#inicio">Início</a>
-              <a href="#recursos">Recursos</a>
-              <a href="#simulador">Simulador</a>
-              <a href="#contato">Contato</a>
-            </nav>
-            <div class="cta-container desktop-cta">
-              <a href="#simulador" class="btn-primary">Simular Orçamento</a>
-            </div>
-          </div>
-        </header>
-        <main>
-          <section id="inicio" class="hero-section">
-            <div class="hero-content">
-              <span class="hero-badge">Tecnologia &amp; Conversão de Elite</span>
-              <h1 class="hero-title">O Sistema Definitivo para Escalar suas Vendas</h1>
-              <p class="hero-subtitle">
-                Uma plataforma moderna, interativa e feita para conversão. Monte seu pacote ideal e descubra o valor em tempo real.
-              </p>
-              <div class="hero-buttons">
-                <a href="#simulador" class="btn-primary">Simular Orçamento</a>
-                <a href="#recursos" class="btn-outline">Ver Funcionalidades</a>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -28,7 +28,7 @@ const Footer = () => {
                 alt="Arkosys Tech Solutions - Desenvolvimento de Sistemas & Soluções Digitais"
                 className="footer-logo-img"
                 width="230"
-                height="50"
+                height="109"
                 loading="lazy"
                 decoding="async"
               />

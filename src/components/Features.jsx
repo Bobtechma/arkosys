@@ -76,7 +76,7 @@ const Features = () => {
                 src="/images/mobile-preview.webp"
                 alt="Aplicativo Mobile do sistema Arkosys rodando em smartphone mostrando gestão completa na palma da mão"
                 className="spotlight-img"
-                width="380"
+                width="600"
                 height="600"
                 loading="lazy"
                 decoding="async"

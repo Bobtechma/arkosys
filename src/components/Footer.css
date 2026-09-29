@@ -33,6 +33,7 @@
   height: 50px;
   width: auto;
   max-width: 230px;
+  aspect-ratio: 460 / 218;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.25));
 }

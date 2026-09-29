@@ -31,11 +31,11 @@ const Hero = () => {
                 src="/images/dashboard-preview.webp"
                 alt="Prévia do Painel Administrativo do sistema Arkosys em Dark Mode mostrando dashboard com métricas e gráficos"
                 className="showcase-img"
-                width="1020"
-                height="520"
+                width="1024"
+                height="572"
                 loading="eager"
                 decoding="async"
-                fetchPriority="high"
+                fetchpriority="high"
               />
             </picture>
           </div>
