@@ -11,11 +11,14 @@ const Header = () => {
   return (
     <header className="header glassmorphism">
       <div className="header-container">
-        <a href="#inicio" className="logo-link" aria-label="OmniSys Solutions Início">
+        <a href="#inicio" className="logo-link" aria-label="Arkosys Tech Solutions Início">
           <img
             src="/images/logo.png"
-            alt="OmniSys Solutions"
+            alt="Arkosys Tech Solutions - Desenvolvimento de Sistemas & Soluções Digitais"
             className="header-logo-img"
+            width="220"
+            height="46"
+            decoding="async"
           />
         </a>
         

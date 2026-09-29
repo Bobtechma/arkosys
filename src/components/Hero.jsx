@@ -27,8 +27,13 @@ const Hero = () => {
           <div className="showcase-media">
             <img
               src="/images/dashboard-preview.jpg"
-              alt="Prévia do Painel Administrativo em Dark Mode"
+              alt="Prévia do Painel Administrativo do sistema Arkosys em Dark Mode mostrando dashboard com métricas e gráficos"
               className="showcase-img"
+              width="1020"
+              height="520"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
           </div>
           <div className="floating-stat-badge glassmorphism">

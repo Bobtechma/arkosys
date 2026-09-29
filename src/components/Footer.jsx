@@ -23,8 +23,12 @@ const Footer = () => {
           <div className="footer-logo">
             <img
               src="/images/logo.png"
-              alt="OmniSys Solutions"
+              alt="Arkosys Tech Solutions - Desenvolvimento de Sistemas & Soluções Digitais"
               className="footer-logo-img"
+              width="230"
+              height="50"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <p className="footer-tagline">
@@ -85,7 +89,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} OmniSys Solutions — Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Arkosys — Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
           <div className="footer-guarantee-note">
             <span>🔒 Segurança com Criptografia SSL e Dados em Nuvem</span>
           </div>
