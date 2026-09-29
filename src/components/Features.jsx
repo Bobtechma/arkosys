@@ -70,15 +70,18 @@ const Features = () => {
             </div>
           </div>
           <div className="spotlight-media">
-            <img
-              src="/images/mobile-preview.jpg"
-              alt="Aplicativo Mobile do sistema Arkosys rodando em smartphone mostrando gestão completa na palma da mão"
-              className="spotlight-img"
-              width="380"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source srcSet="/images/mobile-preview.webp" type="image/webp" />
+              <img
+                src="/images/mobile-preview.webp"
+                alt="Aplicativo Mobile do sistema Arkosys rodando em smartphone mostrando gestão completa na palma da mão"
+                className="spotlight-img"
+                width="380"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </div>

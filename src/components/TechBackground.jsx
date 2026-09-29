@@ -23,11 +23,14 @@ const TechBackground = () => {
 
     window.addEventListener('resize', handleResize);
 
+    const isMobile = width < 768;
+
     // Nodes (System architecture nodes)
-    const nodeCount = Math.floor((width * height) / 22000);
+    const calculatedNodes = Math.floor((width * height) / 22000);
+    const targetNodeCount = isMobile ? 16 : Math.max(35, calculatedNodes);
     const nodes = [];
 
-    for (let i = 0; i < Math.max(35, nodeCount); i++) {
+    for (let i = 0; i < targetNodeCount; i++) {
       nodes.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -40,7 +43,7 @@ const TechBackground = () => {
 
     // Code Stream Symbols floating in background
     const symbols = [];
-    const symbolCount = Math.floor(width / 140);
+    const symbolCount = isMobile ? 6 : Math.floor(width / 140);
 
     for (let i = 0; i < symbolCount; i++) {
       symbols.push({
@@ -56,7 +59,7 @@ const TechBackground = () => {
     // Packets traveling along lines
     let pulses = [];
 
-    const maxDistance = 140;
+    const maxDistance = isMobile ? 95 : 140;
 
     const render = () => {
       ctx.clearRect(0, 0, width, height);

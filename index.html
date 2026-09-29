@@ -16,12 +16,12 @@
     <meta name="theme-color" content="#121212" />
     <meta name="color-scheme" content="dark" />
 
-    <link rel="canonical" href="https://arkosys.com.br/" />
+    <link rel="canonical" href="https://www.arkosys.com.br/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="https://arkosys.com.br/" />
+    <meta property="og:url" content="https://www.arkosys.com.br/" />
     <meta
       property="og:title"
       content="Arkosys — Desenvolvimento de Sistemas & Soluções Digitais"
@@ -30,7 +30,7 @@
       property="og:description"
       content="Desenvolvimento de sistemas sob medida para escalar seu negócio. Simule seu orçamento em tempo real e descubra o valor do seu sistema personalizado."
     />
-    <meta property="og:image" content="https://landing-page-vendas-sistemas.vercel.app/images/og-image-v2.jpg" />
+    <meta property="og:image" content="https://www.arkosys.com.br/images/og-image-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Arkosys" />
@@ -47,7 +47,37 @@
       name="twitter:description"
       content="Desenvolvimento de sistemas sob medida para escalar seu negócio. Simule seu orçamento em tempo real e descubra o valor do seu sistema personalizado."
     />
-    <meta name="twitter:image" content="https://landing-page-vendas-sistemas.vercel.app/images/og-image-v2.jpg" />
+    <meta name="twitter:image" content="https://www.arkosys.com.br/images/og-image-v2.jpg" />
+
+    <!-- Preconnect & Asynchronous Non-blocking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      />
+    </noscript>
+
+    <!-- Preload Hero LCP Image -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/images/dashboard-preview.webp"
+      fetchpriority="high"
+    />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -55,8 +85,8 @@
         "@context": "https://schema.org",
         "@type": "SoftwareCompany",
         "name": "Arkosys",
-        "url": "https://arkosys.com.br/",
-        "logo": "https://arkosys.com.br/images/logo.png",
+        "url": "https://www.arkosys.com.br/",
+        "logo": "https://www.arkosys.com.br/images/logo.png",
         "description": "Desenvolvimento de sistemas sob medida para escalar seu negócio.",
         "address": {
           "@type": "PostalAddress",
@@ -71,12 +101,52 @@
     </script>
 
     <title>Arkosys — Desenvolvimento de Sistemas & Soluções Digitais</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="app-container">
+        <header class="header glassmorphism">
+          <div class="header-container">
+            <a href="#inicio" class="logo-link" aria-label="Arkosys Tech Solutions Início">
+              <picture>
+                <source srcset="/images/logo.webp" type="image/webp" />
+                <img
+                  src="/images/logo.webp"
+                  alt="Arkosys Tech Solutions - Desenvolvimento de Sistemas & Soluções Digitais"
+                  class="header-logo-img"
+                  width="220"
+                  height="46"
+                />
+              </picture>
+            </a>
+            <nav class="desktop-nav">
+              <a href="#inicio">Início</a>
+              <a href="#recursos">Recursos</a>
+              <a href="#simulador">Simulador</a>
+              <a href="#contato">Contato</a>
+            </nav>
+            <div class="cta-container desktop-cta">
+              <a href="#simulador" class="btn-primary">Simular Orçamento</a>
+            </div>
+          </div>
+        </header>
+        <main>
+          <section id="inicio" class="hero-section">
+            <div class="hero-content">
+              <span class="hero-badge">Tecnologia &amp; Conversão de Elite</span>
+              <h1 class="hero-title">O Sistema Definitivo para Escalar suas Vendas</h1>
+              <p class="hero-subtitle">
+                Uma plataforma moderna, interativa e feita para conversão. Monte seu pacote ideal e descubra o valor em tempo real.
+              </p>
+              <div class="hero-buttons">
+                <a href="#simulador" class="btn-primary">Simular Orçamento</a>
+                <a href="#recursos" class="btn-outline">Ver Funcionalidades</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -77,24 +77,27 @@ const Simulator = () => {
             <div className="addons-list">
               {ADDONS.map((addon) => {
                 const isChecked = selectedAddons.includes(addon.id);
+                const inputId = `addon-${addon.id}`;
                 return (
                   <div
                     key={addon.id}
                     className={`addon-item glassmorphism ${isChecked ? 'active' : ''}`}
                     onClick={() => toggleAddon(addon.id)}
                   >
-                    <label className="checkbox-container" onClick={(e) => e.stopPropagation()}>
+                    <label className="checkbox-container" htmlFor={inputId} onClick={(e) => e.stopPropagation()}>
                       <input
+                        id={inputId}
                         type="checkbox"
+                        aria-label={`Selecionar módulo ${addon.name}`}
                         checked={isChecked}
                         onChange={() => toggleAddon(addon.id)}
                       />
-                      <span className="checkmark"></span>
+                      <span className="checkmark" aria-hidden="true"></span>
                     </label>
 
                     <div className="addon-details">
                       <div className="addon-header">
-                        <span className="addon-name">{addon.name}</span>
+                        <label htmlFor={inputId} className="addon-name" style={{ cursor: 'pointer' }}>{addon.name}</label>
                         <span className="addon-price">+{formatCurrency(addon.price)}</span>
                       </div>
                       <p className="addon-desc">{addon.desc}</p>

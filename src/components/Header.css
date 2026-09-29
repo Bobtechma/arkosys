@@ -64,18 +64,24 @@
 
 .btn-primary {
   background-color: var(--color-accent);
-  color: #fff;
+  color: #09090b;
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--radius-lg);
   font-size: var(--font-size-body);
-  font-weight: var(--font-weight-semibold);
-  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5); /* Glow effect */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.4); /* Glow effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(249, 115, 22, 0.8);
+  background-color: #fb923c;
+  color: #000000;
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.85);
 }
 
 /* Hamburger */

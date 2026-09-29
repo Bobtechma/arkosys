@@ -25,16 +25,19 @@ const Hero = () => {
             <span className="showcase-title-tag">painel.seusistema.com.br — Visão Geral</span>
           </div>
           <div className="showcase-media">
-            <img
-              src="/images/dashboard-preview.jpg"
-              alt="Prévia do Painel Administrativo do sistema Arkosys em Dark Mode mostrando dashboard com métricas e gráficos"
-              className="showcase-img"
-              width="1020"
-              height="520"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
+            <picture>
+              <source srcSet="/images/dashboard-preview.webp" type="image/webp" />
+              <img
+                src="/images/dashboard-preview.webp"
+                alt="Prévia do Painel Administrativo do sistema Arkosys em Dark Mode mostrando dashboard com métricas e gráficos"
+                className="showcase-img"
+                width="1020"
+                height="520"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
           </div>
           <div className="floating-stat-badge glassmorphism">
             <span className="stat-pulse"></span>
